@@ -1,4 +1,4 @@
-# Gruver - A AwesomeWM theme based on Material Awesome
+# Gruver - An AwesomeWM theme based on Material Awesome
 
 Original Work - [PapyElGringo's Material Awesome](https://github.com/material-shell/material-awesome)
 
