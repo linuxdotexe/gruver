@@ -25,7 +25,7 @@ local awesome_overrides =
   --theme.dir             = os.getenv("HOME") .. "/code/awesome-pro/themes/pro-dark"
 
   theme.icons = theme.dir .. '/icons/'
-  theme.wallpaper = walp_dir .. 'current.jpg'
+  theme.wallpaper = '~/Downloads/walps/current.jpg'
   --theme.wallpaper = '#e0e0e0'
   --theme.font = 'Roboto Medium 10'
   theme.font = 'BlexMono Nerd Font Mono 10'

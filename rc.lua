@@ -82,3 +82,9 @@ awful.spawn.with_shell('nm-applet')
 awful.spawn.with_shell('xfce4-power-manager')
 awful.spawn.with_shell('lxqt-policykit-agent')
 awful.spawn.with_shell('flameshot')
+
+awful.tag(
+  { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
+  s,
+  awful.layout.layouts[1]
+)
