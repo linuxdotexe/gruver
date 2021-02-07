@@ -61,4 +61,4 @@ PS: My Rofi theme goes well with this. Check it out [here](https://github.com/sa
 
 ## Need help with this:
 
-Fix tag indicator position. Currently vertical left. Need bottom.
+Remove icons from tags and replace with text.
