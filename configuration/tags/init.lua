@@ -1,7 +1,6 @@
 local awful = require('awful')
 local gears = require('gears')
 local icons = require('theme.icons')
-
 local tags = {
   {
     icon = icons.code,

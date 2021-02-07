@@ -8,7 +8,8 @@ local mat_icon_button = require('widget.material.icon-button')
 local mat_icon = require('widget.material.icon')
 local TagList = require('widget.tag-list')
 local dpi = require('beautiful').xresources.apply_dpi
-
+local spotify_widget = require('widgetsFromGitHub.awesome-wm-widgets.spotify-widget.spotify')
+local todo_widget = require('widgetsFromGitHub.awesome-wm-widgets.todo-widget.todo')
 local icons = require('theme.icons')
 
 -- Clock / Calendar 12AM/PM fornat
@@ -126,6 +127,14 @@ local TopPanel = function(s, offset)
     nil,
     {
       layout = wibox.layout.fixed.horizontal,
+      spotify_widget({
+              font = 'BlexMono Nerd Font Mono 9',
+              show_tooltip = false,
+              dim_when_paused = true,
+              play_icon = '/usr/share/icons/gruvbox-dark-icons-gtk/24x24/apps/spotify.svg',
+              pause_icon = '/usr/share/icons/gruvbox-dark-icons-gtk/24x24/panel/spotify-indicator.svg'
+          }),
+      todo_widget(),
       wibox.container.margin(systray, dpi(10), dpi(10)),
       require('widget.battery'),
       textclock,

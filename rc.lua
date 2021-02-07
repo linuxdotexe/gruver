@@ -2,6 +2,7 @@ local gears = require('gears')
 local awful = require('awful')
 require('awful.autofocus')
 local beautiful = require('beautiful')
+local spotify_widget = require("widgetsFromGitHub.awesome-wm-widgets.spotify-widget.spotify")
 
 -- Theme
 beautiful.init(require('theme'))
