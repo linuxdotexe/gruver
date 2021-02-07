@@ -65,7 +65,7 @@ local awesome_overrides =
 
   -- Layout
 
-  theme.layout_max = theme.icons .. 'layouts/arrow-expand-all.png'
+  --theme.layout_max = theme.icons .. 'layouts/arrow-expand-all.png'
   theme.layout_tile = theme.icons .. 'layouts/view-quilt.png'
 
   -- Taglist
@@ -74,13 +74,13 @@ local awesome_overrides =
   theme.taglist_bg_occupied = theme.background.hue_800
   theme.taglist_bg_urgent =
     'linear:0,0:' ..
-    dpi(40) ..
+    dpi(0) ..
       ',0:0,' ..
         theme.accent.hue_500 ..
           ':0.08,' .. theme.accent.hue_500 .. ':0.08,' .. theme.background.hue_800 .. ':1,' .. theme.background.hue_800
   theme.taglist_bg_focus =
     'linear:0,0:' ..
-    dpi(40) ..
+    dpi(0) ..
       ',0:0,' ..
         theme.primary.hue_500 ..
           ':0.08,' .. theme.primary.hue_500 .. ':0.08,' .. theme.background.hue_800 .. ':1,' .. theme.background.hue_800
@@ -92,7 +92,7 @@ local awesome_overrides =
   theme.tasklist_bg_normal = theme.background.hue_800
   theme.tasklist_bg_focus =
     'linear:0,0:0,' ..
-    dpi(40) ..
+    dpi(0) ..
       ':0,' ..
         theme.background.hue_800 ..
           ':0.95,' .. theme.background.hue_800 .. ':0.95,' .. theme.fg_normal .. ':1,' .. theme.fg_normal
