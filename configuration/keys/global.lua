@@ -13,16 +13,16 @@ local globalKeys =
   -- Hotkeys
   awful.key({modkey}, 'F1', hotkeys_popup.show_help, {description = 'show help', group = 'awesome'}),
   -- Tag browsing
-  awful.key({modkey}, 'h', awful.tag.viewprev, {description = 'view previous', group = 'tag'}),
-  awful.key({modkey}, 'l', awful.tag.viewnext, {description = 'view next', group = 'tag'}),
+  awful.key({modkey}, 'a', awful.tag.viewprev, {description = 'view previous', group = 'tag'}),
+  awful.key({modkey}, 'd', awful.tag.viewnext, {description = 'view next', group = 'tag'}),
   awful.key({modkey}, 'Escape', awful.tag.history.restore, {description = 'go back', group = 'tag'}),
   
   -- Spotify-shell
-   awful.key({ modkey, }, "d", function () spotify_shell.launch() end, {description = "spotify shell", group = "music"}),
+   awful.key({ modkey, }, "s", function () spotify_shell.launch() end, {description = "spotify shell", group = "music"}),
   -- Default client focus
   awful.key(
     {modkey},
-    'd',
+    'l',
     function()
       awful.client.focus.byidx(1)
     end,
@@ -30,19 +30,11 @@ local globalKeys =
   ),
   awful.key(
     {modkey},
-    'a',
+    'h',
     function()
       awful.client.focus.byidx(-1)
     end,
     {description = 'focus previous by index', group = 'client'}
-  ),
-  awful.key(
-    {modkey},
-    'e',
-    function()
-      _G.screen.primary.left_panel:toggle(true)
-    end,
-    {description = 'show main menu', group = 'awesome'}
   ),
   awful.key({modkey}, 'u', awful.client.urgent.jumpto, {description = 'jump to urgent client', group = 'client'}),
   awful.key(
@@ -59,25 +51,11 @@ local globalKeys =
   -- Programms
   awful.key(
     {modkey},
-    'l',
+    'e',
     function()
       awful.spawn(apps.default.lock)
     end
   ),
-  awful.key(
-    {},
-    'Print',
-    function()
-      awful.util.spawn_with_shell('maim -s | xclip -selection clipboard -t image/png')
-    end
-  ),
-  awful.key(
-    {modkey},
-    'b',
-    function()
-	    awful.spawn.with_shell('brave')
-    end
-    ),
   awful.key(
     {modkey},
     't',
@@ -146,22 +124,6 @@ local globalKeys =
     {description = 'decrease the number of columns', group = 'layout'}
   ),
   awful.key(
-    {modkey},
-    'space',
-    function()
-      awful.layout.inc(1)
-    end,
-    {description = 'select next', group = 'layout'}
-  ),
-  awful.key(
-    {modkey, 'Shift'},
-    'space',
-    function()
-      awful.layout.inc(-1)
-    end,
-    {description = 'select previous', group = 'layout'}
-  ),
-  awful.key(
     {modkey, 'Control'},
     'n',
     function()
@@ -182,44 +144,6 @@ local globalKeys =
       awful.spawn.with_shell('rofi -show drun')
     end,
     {description = 'dropdown application', group = 'launcher'}
-  ),
-  -- Widgets popups
-  awful.key(
-    {altkey},
-    'h',
-    function()
-      if beautiful.fs then
-        beautiful.fs.show(7)
-      end
-    end,
-    {description = 'show filesystem', group = 'widgets'}
-  ),
-  awful.key(
-    {altkey},
-    'w',
-    function()
-      if beautiful.weather then
-        beautiful.weather.show(7)
-      end
-    end,
-    {description = 'show weather', group = 'widgets'}
-  ),
-  -- Brightness
-  awful.key(
-    {},
-    'XF86MonBrightnessUp',
-    function()
-      awful.spawn('xbacklight -inc 10')
-    end,
-    {description = '+10%', group = 'hotkeys'}
-  ),
-  awful.key(
-    {},
-    'XF86MonBrightnessDown',
-    function()
-      awful.spawn('xbacklight -dec 10')
-    end,
-    {description = '-10%', group = 'hotkeys'}
   ),
   -- ALSA volume control
   awful.key(
@@ -250,10 +174,18 @@ local globalKeys =
     {},
     'XF86AudioNext',
     function()
-      --
+      awful.spawn('sp next')
     end,
-    {description = 'toggle mute', group = 'hotkeys'}
+    {description = 'play next song', group = 'spotify'}
   ),
+  awful.key(
+      {},
+      'XF86AudioPrev',
+      function()
+          awful.spawn('sp prev')
+      end,
+      {description = 'play previous song', group = 'spotify'}
+      ),
   awful.key(
     {},
     'XF86PowerDown',
