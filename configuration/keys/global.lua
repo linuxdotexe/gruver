@@ -3,6 +3,7 @@ require('awful.autofocus')
 local beautiful = require('beautiful')
 local hotkeys_popup = require('awful.hotkeys_popup').widget
 
+local spotify_shell = require("widgetsFromGitHub.awesome-wm-widgets.spotify-shell.spotify-shell")
 local modkey = require('configuration.keys.mod').modKey
 local altkey = require('configuration.keys.mod').altKey
 local apps = require('configuration.apps')
@@ -15,6 +16,9 @@ local globalKeys =
   awful.key({modkey}, 'h', awful.tag.viewprev, {description = 'view previous', group = 'tag'}),
   awful.key({modkey}, 'l', awful.tag.viewnext, {description = 'view next', group = 'tag'}),
   awful.key({modkey}, 'Escape', awful.tag.history.restore, {description = 'go back', group = 'tag'}),
+  
+  -- Spotify-shell
+   awful.key({ modkey, }, "d", function () spotify_shell.launch() end, {description = "spotify shell", group = "music"}),
   -- Default client focus
   awful.key(
     {modkey},
