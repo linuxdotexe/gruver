@@ -4,6 +4,7 @@ local dpi = require('beautiful').xresources.apply_dpi
 local capi = {button = _G.button}
 local clickable_container = require('widget.material.clickable-container')
 local modkey = require('configuration.keys.mod').modKey
+local gears = require('gears')
 --- Common method to create buttons.
 -- @tab buttons
 -- @param object
@@ -109,10 +110,10 @@ local function list_update(w, buttons, label, data, objects)
 end
 
 local TagList = function(s)
-  return awful.widget.taglist(
-    s,
-    awful.widget.taglist.filter.all,
-    awful.util.table.join(
+  return awful.widget.taglist({
+    screen = s,
+    filter = awful.widget.taglist.filter.all,
+    buttons = awful.util.table.join(
       awful.button(
         {},
         1,
@@ -155,9 +156,8 @@ local TagList = function(s)
         end
       )
     ),
-    {},
-    list_update,
-    wibox.layout.fixed.horizontal()
-  )
+    update_function = list_update,
+    layout = wibox.layout.fixed.horizontal()
+  })
 end
 return TagList

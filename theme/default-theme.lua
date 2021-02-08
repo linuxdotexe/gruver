@@ -60,7 +60,7 @@ local awesome_overrides =
   --theme.tooltip_border_color = '#232323'
   theme.tooltip_border_width = 0
   theme.tooltip_shape = function(cr, w, h)
-    gears.shape.rounded_rect(cr, w, h, dpi(6))
+    gears.shape.rectangle(cr, w, h)
   end
 
   -- Layout
