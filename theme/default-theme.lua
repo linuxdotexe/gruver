@@ -32,10 +32,10 @@ local awesome_overrides =
   --theme.title_font = 'Roboto Medium 14'
   theme.title_font = 'BlexMono Nerd Font Mono 14'
 
-  theme.fg_normal = '#a89984'
+  theme.fg_normal = '#665c54'
 
-  theme.fg_focus = '#ebdbb2'
-  theme.fg_urgent = '#d5c4a1'
+  theme.fg_focus = '#fbf1c7'
+  theme.fg_urgent = '#fbf1c7'
   theme.bat_fg_critical = '#32302f'
 
   theme.bg_normal = theme.background.hue_800
