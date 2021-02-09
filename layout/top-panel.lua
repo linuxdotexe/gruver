@@ -130,7 +130,7 @@ local TopPanel = function(s, offset)
       spotify_widget({
               font = 'BlexMono Nerd Font Mono 9',
               show_tooltip = false,
-              dim_when_paused = true,
+              dim_when_paused = false,
               play_icon = '/usr/share/icons/gruvbox-dark-icons-gtk/24x24/apps/spotify.svg',
               pause_icon = '/usr/share/icons/gruvbox-dark-icons-gtk/24x24/panel/spotify-indicator.svg'
           }),
