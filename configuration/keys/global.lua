@@ -187,6 +187,14 @@ local globalKeys =
       {description = 'play previous song', group = 'spotify'}
       ),
   awful.key(
+      {},
+      'XF86AudioPlay',
+      function ()
+          awful.spawn('sp play')
+        end,
+        {description = 'toggle play and pause for spotify only', group = 'spotify'}
+      ),
+  awful.key(
     {},
     'XF86PowerDown',
     function()
