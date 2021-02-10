@@ -20,12 +20,12 @@ local tags = {
     defaultApp = 'telegram-desktop',
     screen = 1
   },
-  --{
-    --icon = icons.folder,
-    --type = 'files',
-    --defaultApp = 'superproductivity',
-    --screen = 1
-  --},
+  {
+    icon = icons.folder,
+    type = 'files',
+    defaultApp = 'superproductivity',
+    screen = 1
+  },
   {
     icon = icons.music,
     type = 'music',
@@ -69,7 +69,7 @@ _G.tag.connect_signal(
   function(t)
     local currentLayout = awful.tag.getproperty(t, 'layout')
     if (currentLayout == awful.layout.suit.max) then
-      t.gap = 0
+      t.gap = 5
     else
       t.gap = 5
     end
