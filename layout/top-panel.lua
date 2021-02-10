@@ -13,7 +13,7 @@ local todo_widget = require('widgetsFromGitHub.awesome-wm-widgets.todo-widget.to
 local icons = require('theme.icons')
 
 -- Clock / Calendar 12AM/PM fornat
-local textclock = wibox.widget.textclock('<span font="BlexMono Nerd Font Mono 10">%I:%M %p - %d.%m.%Y</span>')
+local textclock = wibox.widget.textclock('<span font="BlexMono Nerd Font Mono 10">%I:%M %p</span>')
 textclock.forced_height = 10
 
 local clock_widget = wibox.container.margin(textclock, dpi(9), dpi(9), dpi(9), dpi(8))
@@ -27,6 +27,7 @@ month_calendar:attach(textclock)
 local systray = wibox.widget.systray()
 systray:set_horizontal(true)
 systray:set_base_size(24)
+systray.forced_height = 24
 local add_button = mat_icon_button(mat_icon(icons.plus, dpi(24)))
 add_button:buttons(
   gears.table.join(
@@ -98,8 +99,6 @@ local TopPanel = function(s, offset)
       screen = s,
       height = dpi(30),
       width = s.geometry.width,
-      --x = s.geometry.x + offsetx,
-      --y = s.geometry.y,
       stretch = false,
       bg = beautiful.background.hue_800,
       fg = beautiful.fg_normal,
@@ -135,10 +134,9 @@ local TopPanel = function(s, offset)
               pause_icon = '/usr/share/icons/gruvbox-dark-icons-gtk/24x24/panel/spotify-indicator.svg'
           }),
       todo_widget(),
-      wibox.container.margin(systray, dpi(10), dpi(10)),
-      require('widget.battery'),
+      wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
       textclock,
-      --LayoutBox(s),
+      require('widget.battery'),
     }
   }
 
