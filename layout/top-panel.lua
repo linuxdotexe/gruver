@@ -28,6 +28,7 @@ local systray = wibox.widget.systray()
 systray:set_horizontal(true)
 systray:set_base_size(24)
 systray.forced_height = 24
+beautiful.systray_icon_spacing = dpi(7)
 local add_button = mat_icon_button(mat_icon(icons.plus, dpi(24)))
 add_button:buttons(
   gears.table.join(
