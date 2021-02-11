@@ -39,7 +39,7 @@ awful.rules.rules = {
       drawBackdrop = true,
       shape = function()
         return function(cr, w, h)
-          gears.shape.rounded_rect(cr, w, h, 8)
+          gears.shape.rectangle(cr, w, h)
         end
       end,
       skip_decoration = true
