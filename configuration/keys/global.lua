@@ -18,7 +18,7 @@ local globalKeys =
   awful.key({modkey}, 'Escape', awful.tag.history.restore, {description = 'go back', group = 'tag'}),
   
   -- Spotify-shell
-   awful.key({ modkey, }, "s", function () spotify_shell.launch() end, {description = "spotify shell", group = "music"}),
+   awful.key({ modkey, }, "s", function () spotify_shell.launch() end, {description = "spotify shell", group = "spotify"}),
   -- Default client focus
   awful.key(
     {modkey},
@@ -123,6 +123,16 @@ local globalKeys =
     end,
     {description = 'decrease the number of columns', group = 'layout'}
   ),
+  awful.key(
+      {modkey},
+      'v',
+      function()
+          for s in screen do
+              s.top_panel.visible = not s.top_panel.visible
+          end
+      end,
+      {description = 'hide top_panel', group = 'layout'}
+      ),
   awful.key(
     {modkey, 'Control'},
     'n',
