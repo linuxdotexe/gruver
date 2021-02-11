@@ -2,7 +2,7 @@
 
 Original Work - [PapyElGringo's Material Awesome](https://github.com/material-shell/material-awesome)
 
-![gruver](https://user-images.githubusercontent.com/74004229/107178819-0403d580-69fb-11eb-992b-543e93ead073.png)
+![ssupdate](https://user-images.githubusercontent.com/74004229/107628539-c915d200-6c86-11eb-9eb4-d90afe8db2d2.png)
 
 ## My changes
 
