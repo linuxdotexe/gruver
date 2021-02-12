@@ -18,10 +18,18 @@ Original Work - [PapyElGringo's Material Awesome](https://github.com/material-sh
 ## Dependencies
 
 - AwesomeWM
-- BlexMono Nerd Font
-- Compton (OP suggested [this compton fork](https://github.com/tryone144/compton) but I couldn't get the blur and animations working)
+- BlexMono Nerd Font Mono
 - Themes and Icons are your choice.
-
+## Other suggested dependencies
+- Spotify (the music controls only work for spotify)
+- Spotify command line client (music controls work through this and the widget takes data from this.)
+- i3lock (default lock is set to this. Lock symbol in power menu thing might not work if this isn't there.)
+- Xfce4 Power Manager (press the power button to toggle the power menu, since I removed the menu_button and hence the functionality it provides.)
+- Alacritty (the terminal is set to this, so the terminal might not open if this isn't there.)
+- Compositor (this is really a choice, if you want transparency and blur, you can enable it thorugh adding this to start.)
+- Rofi (since there kinda is no other way to launch apps.)
+- Any policy kit agent
+- LXAppearence (to change themes and cursors.)
 ## To change wallpaper
 
 1. To change the wallpaper, navigate to "/awesome/theme/default-theme.lua" and change the variable "theme.wallpaper" and add your wallpaper path there. This is if you want to have a single wallpaper. Use nitrogen or feh for slideshow stuff.
