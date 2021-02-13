@@ -151,7 +151,7 @@ local globalKeys =
     {modkey},
     'space',
     function()
-      awful.spawn.with_shell('rofi -show drun')
+      awful.spawn.with_shell('rofi -show run')
     end,
     {description = 'dropdown application', group = 'launcher'}
   ),
