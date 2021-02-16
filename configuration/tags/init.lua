@@ -21,12 +21,6 @@ local tags = {
     screen = 1
   },
   {
-    icon = icons.folder,
-    type = 'files',
-    defaultApp = 'superproductivity',
-    screen = 1
-  },
-  {
     icon = icons.music,
     type = 'music',
     defaultApp = 'spotify',
