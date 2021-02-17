@@ -12,7 +12,8 @@ local tags = {
     icon = icons.cles,
     type = 'cles',
     defaultApp = 'brave',
-    screen = 1
+    screen = 1,
+    id = '2'
   },
   {
     icon = icons.social,

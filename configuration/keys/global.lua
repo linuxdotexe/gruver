@@ -184,25 +184,17 @@ local globalKeys =
     {},
     'XF86AudioNext',
     function()
-      awful.spawn('sp next')
+      awful.spawn('playerctl next')
     end,
-    {description = 'play next song', group = 'spotify'}
+    {description = 'play next song', group = 'music'}
   ),
-  awful.key(
-      {},
-      'XF86AudioPrev',
-      function()
-          awful.spawn('sp prev')
-      end,
-      {description = 'play previous song', group = 'spotify'}
-      ),
   awful.key(
       {},
       'XF86AudioPlay',
       function ()
-          awful.spawn('sp play')
+          awful.spawn('playerctl pause')
         end,
-        {description = 'toggle play and pause for spotify only', group = 'spotify'}
+        {description = 'toggle play and pause', group = 'music'}
       ),
   awful.key(
     {},

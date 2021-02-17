@@ -13,7 +13,7 @@ local gfs = require("gears.filesystem")
 local wibox = require("wibox")
 local gears = require("gears")
 
-local ICON = '/usr/share/icons/gruvbox-dark-icons-gtk/24x24/panel/spotify-indicator.svg'
+local ICON = '/usr/share/icons/gruvbox-dark-icons-gtk/24x24/panel/rhythmbox-panel.svg'
 
 local spotify_shell = awful.widget.prompt()
 
@@ -38,7 +38,7 @@ w:setup {
             resize = false
         },
         id = 'icon',
-        top = 11,
+        top = 13,
         left = 10,
         layout = wibox.container.margin
     },
@@ -59,10 +59,9 @@ local function launch()
         prompt = "",
         bg_cursor = '#a99984',
         textbox = spotify_shell.widget,
-        history_path = gfs.get_dir('cache') .. '/spotify_history',
         exe_callback = function(input_text)
             if not input_text or #input_text == 0 then return end
-            awful.spawn("sp " .. input_text)
+            awful.spawn("playerctl " .. input_text)
         end,
         done_callback = function()
             w.visible = false
