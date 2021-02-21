@@ -1,4 +1,4 @@
-# Gruver - An AwesomeWM theme based on Material Awesome
+# Gruver - An AwesomeWM theme
 
 Original Work - [PapyElGringo's Material Awesome](https://github.com/material-shell/material-awesome)
 
@@ -6,29 +6,32 @@ Original Work - [PapyElGringo's Material Awesome](https://github.com/material-sh
 
 ## My changes
 
-- Changed some icons for the tags.
-- Removed the WiFi thing 'cause it wasn't working for me.
-- Changed the colour scheme (still following the material guidelines) and made it a little darker and nice.
-- Changed some shortcuts.
-- Removed "Search Applications".
-- Removed full screen switch and left tabbing as-is.
+-   Changed some icons for the tags.
+-   Removed the WiFi thing 'cause it wasn't working for me.
+-   Changed the colour scheme (still following the material guidelines) and made it a little darker and nice.
+-   Changed some shortcuts.
+-   Removed "Search Applications".
+-   Removed full screen switch and left tabbing as-is.
 
 > PS: I don't know much lua so I changed what I understood.
 
 ## Dependencies
 
-- AwesomeWM
-- BlexMono Nerd Font Mono
-- Themes and Icons are your choice.
+-   AwesomeWM
+-   BlexMono Nerd Font Mono
+-   Themes and Icons are your choice.
+
 ## Other suggested dependencies
-- playerctl
-- i3lock (default lock is set to this. Lock symbol in power menu thing might not work if this isn't there.)
-- Xfce4 Power Manager (press the power button to toggle the power menu, since I removed the menu_button and hence the functionality it provides.)
-- Alacritty (the terminal is set to this, so the terminal might not open if this isn't there.)
-- Compositor (this is really a choice, if you want transparency and blur, you can enable it thorugh adding this to start.)
-- Rofi (since there kinda is no other way to launch apps.)
-- Any policy kit agent
-- LXAppearence (to change themes and cursors.)
+
+-   playerctl
+-   i3lock (default lock is set to this. Lock symbol in power menu thing might not work if this isn't there.)
+-   Xfce4 Power Manager (press the power button to toggle the power menu, since I removed the menu_button and hence the functionality it provides.)
+-   Alacritty (the terminal is set to this, so the terminal might not open if this isn't there.)
+-   Compositor (this is really a choice, if you want transparency and blur, you can enable it thorugh adding this to start.)
+-   Rofi (since there kinda is no other way to launch apps.)
+-   Any policy kit agent
+-   LXAppearence (to change themes and cursors.)
+
 ## To change wallpaper
 
 1. To change the wallpaper, navigate to "/awesome/theme/default-theme.lua" and change the variable "theme.wallpaper" and add your wallpaper path there. This is if you want to have a single wallpaper. Use nitrogen or feh for slideshow stuff.

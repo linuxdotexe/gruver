@@ -78,7 +78,6 @@ _G.client.connect_signal(
     c.border_color = beautiful.border_normal
   end
 )
---awful.spawn.with_shell('picom --config ~/.config/picom/picom.conf')
 awful.spawn.with_shell('nm-applet')
 awful.spawn.with_shell('xfce4-power-manager')
 awful.spawn.with_shell('lxqt-policykit-agent')

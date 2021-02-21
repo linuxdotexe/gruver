@@ -12,8 +12,8 @@ local awful = require("awful")
 local wibox = require("wibox")
 local watch = require("awful.widget.watch")
 
-local GET_SPOTIFY_STATUS_CMD = 'sp status'
-local GET_CURRENT_SONG_CMD = 'sp current'
+local GET_SPOTIFY_STATUS_CMD = 'playerctl status'
+local GET_CURRENT_SONG_CMD = 'playerctl metadeta --format "{{status}}"'
 
 local function ellipsize(text, length)
     return (text:len() > length and length > 0)
@@ -121,11 +121,7 @@ local function worker(user_args)
     --  - scroll down - play previous song
     spotify_widget:connect_signal("button::press", function(_, _, _, button)
         if (button == 1) then
-            awful.spawn("sp play", false)      -- left click
-        elseif (button == 4) then
-            awful.spawn("sp next", false)  -- scroll up
-        elseif (button == 5) then
-            awful.spawn("sp prev", false)  -- scroll down
+            awful.spawn("playerctl play", false)      -- left click
         end
         awful.spawn.easy_async(GET_SPOTIFY_STATUS_CMD, function(stdout, stderr, exitreason, exitcode)
             update_widget_icon(spotify_widget, stdout, stderr, exitreason, exitcode)
