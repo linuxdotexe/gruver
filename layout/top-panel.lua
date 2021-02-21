@@ -23,6 +23,14 @@ local month_calendar = awful.widget.calendar_popup.month({
   week_numbers = true
 })
 month_calendar:attach(textclock)
+-- ROBBED from https://git.sr.ht/~cnx/dotfiles/tree/d96622187e7886c889f04f553e449c4088ea76c0/item/awesome/.config/awesome/rc.lua
+local myplayer_text = wibox.widget.textbox()
+awful.spawn.with_line_callback(
+  "playerctl --follow metadata --format ' {{artist}} <{{status}}> {{title}}'",
+  {stdout = function (line)
+     myplayer_text:set_text(line:gsub('<Playing>', '>'):gsub('<.+>', '|'))
+   end}
+)
  local menu_icon =
     wibox.widget {
     icon = icons.menu,
@@ -35,7 +43,6 @@ month_calendar:attach(textclock)
           menu_icon,
           widget = clickable_container
       },
-      --bg = beautiful.primary.hue_500,
       bg = "#282828",
       widget = wibox.container.background
   }
@@ -155,13 +162,7 @@ local TopPanel = function(s, offset)
     nil,
     {
       layout = wibox.layout.fixed.horizontal,
-      spotify_widget({
-              font = 'BlexMono Nerd Font Mono 9',
-              show_tooltip = false,
-              dim_when_paused = false,
-              play_icon = '/usr/share/icons/gruvbox-dark-icons-gtk/24x24/apps/spotify.svg',
-              pause_icon = '/usr/share/icons/gruvbox-dark-icons-gtk/24x24/panel/spotify-indicator.svg'
-          }),
+      myplayer_text,
       todo_widget(),
       wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
       textclock,
