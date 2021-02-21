@@ -6,7 +6,7 @@ local tags = {
     icon = icons.code,
     type = 'code',
     defaultApp = 'alacritty',
-    screen = 1
+    screen = 1,
   },
   {
     icon = icons.cles,

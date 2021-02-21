@@ -61,7 +61,7 @@ local function list_update(w, buttons, label, data, objects)
       -- All of this is added in a fixed widget
       l:fill_space(true)
       l:add(ibm)
-      -- l:add(tbm)
+      --l:add(tbm)
       bg_clickable:set_widget(l)
 
       -- And all of this gets a background

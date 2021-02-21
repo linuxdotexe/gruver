@@ -23,13 +23,40 @@ local month_calendar = awful.widget.calendar_popup.month({
   week_numbers = true
 })
 month_calendar:attach(textclock)
-
+ local menu_icon =
+    wibox.widget {
+    icon = icons.menu,
+    size = dpi(18),
+    widget = mat_icon
+  }
+  local home_button = 
+  wibox.widget{
+      wibox.widget{
+          menu_icon,
+          widget = clickable_container
+      },
+      --bg = beautiful.primary.hue_500,
+      bg = "#282828",
+      widget = wibox.container.background
+  }
+  home_button:buttons(
+          gears.table.join(
+                  awful.button(
+                      {},
+                      1,
+                      nil,
+                      function()
+                          awful.spawn.with_shell('awesome restart --replace')
+                      end
+                      )
+              )
+      )
 local systray = wibox.widget.systray()
 systray:set_horizontal(true)
 systray:set_base_size(24)
 systray.forced_height = 24
 beautiful.systray_icon_spacing = dpi(7)
-local add_button = mat_icon_button(mat_icon(icons.plus, dpi(24)))
+local add_button = mat_icon_button(mat_icon(icons.plus, dpi(18)))
 add_button:buttons(
   gears.table.join(
     awful.button(
@@ -120,9 +147,10 @@ local TopPanel = function(s, offset)
     {
       layout = wibox.layout.fixed.horizontal,
       -- Create a taglist widget
+      home_button,
       --TagList(s),
       TaskList(s),
-      add_button
+      --add_button
     },
     nil,
     {

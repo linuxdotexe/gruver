@@ -62,8 +62,8 @@ local function list_update(w, buttons, label, data, objects)
           4
         )
       )
-      cb.shape = gears.shape.circle
-      cbm = wibox.container.margin(cb, dpi(4), dpi(8), dpi(12), dpi(12))
+      cb.shape = gears.shape.rectangle
+      cbm = wibox.container.margin(cb, dpi(8), dpi(8), dpi(8), dpi(8))
       cbm:buttons(
         gears.table.join(
           awful.button(
@@ -85,7 +85,7 @@ local function list_update(w, buttons, label, data, objects)
 
       -- All of this is added in a fixed widget
       l:fill_space(true)
-      l:add(ibm)
+      --l:add(ibm)
       l:add(tbm)
       ll:add(l)
       ll:add(cbm)
