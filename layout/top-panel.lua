@@ -28,7 +28,7 @@ local myplayer_text = wibox.widget.textbox()
 awful.spawn.with_line_callback(
   "playerctl --follow metadata --format ' {{artist}} <{{status}}> {{title}}'",
   {stdout = function (line)
-     myplayer_text:set_text(line:gsub('<Playing>', '>'):gsub('<.+>', '|'))
+     myplayer_text:set_text(line:gsub('<Playing>', '|'):gsub('<.+>', '|'))
    end}
 )
  local menu_icon =
