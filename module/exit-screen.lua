@@ -47,7 +47,7 @@ function exit_command()
 end
 function lock_command()
   exit_screen_hide()
-  awful.spawn.with_shell('i3lock -i ~/Downloads/lockwalp.png -u')
+  awful.spawn.with_shell('i3lock -i ~/Downloads/lockwalp.png -O 0 -R 1500')
 end
 function poweroff_command()
   awful.spawn.with_shell('poweroff')
