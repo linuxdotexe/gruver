@@ -58,6 +58,12 @@ awful.spawn.with_line_callback(
                       )
               )
       )
+local seper_tex = wibox.widget{
+    text = '|',
+    align = 'center',
+    valign = 'center',
+    widget = wibox.widget.textbox
+}
 local systray = wibox.widget.systray()
 systray:set_horizontal(true)
 systray:set_base_size(24)
@@ -155,6 +161,7 @@ local TopPanel = function(s, offset)
       layout = wibox.layout.fixed.horizontal,
       -- Create a taglist widget
       home_button,
+      seper_tex,
       --TagList(s),
       TaskList(s),
       --add_button

@@ -134,6 +134,14 @@ local globalKeys =
       {description = 'hide top_panel', group = 'layout'}
       ),
   awful.key(
+      {modkey, 'Control'},
+      'm',
+      function()
+          awful.spawn.with_shell("bash -c 'xdotool windowminimize $(xdotool getactivewindow)'")
+      end,
+      {description = 'minimize focused', group = 'client'}
+      ),
+  awful.key(
     {modkey, 'Control'},
     'n',
     function()

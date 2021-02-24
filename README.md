@@ -31,6 +31,7 @@ Original Work - [PapyElGringo's Material Awesome](https://github.com/material-sh
 -   Rofi (since there kinda is no other way to launch apps.)
 -   Any policy kit agent
 -   LXAppearence (to change themes and cursors.)
+-   xdotool (required for the minimize shortcut to work.)
 
 ## To change wallpaper
 
