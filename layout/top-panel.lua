@@ -155,7 +155,7 @@ local TopPanel = function(s, offset)
     }
   )
 
-  panel:setup {
+ panel:setup {
     layout = wibox.layout.align.horizontal,
     {
       layout = wibox.layout.fixed.horizontal,
@@ -180,4 +180,4 @@ local TopPanel = function(s, offset)
   return panel
 end
 
-return TopPanel
+return TopPanel 
