@@ -83,6 +83,22 @@ local globalKeys =
     end,
     {description = 'increase master width factor', group = 'layout'}
   ),
+awful.key(
+    {altkey, 'Shift'},
+    'e',
+    function()
+      awful.spawn.with_shell('bash -c "xinput enable $(xinput | grep Synaptics | grep -oP "id=\K..")"')
+    end,
+    {description = 'enable synaptics touchpad', group = 'touchpad'}
+  ),
+awful.key(
+    {altkey, 'Shift'},
+    'd',
+    function()
+      awful.spawn.with_shell('bash -c "xinput disable $(xinput | grep Synaptics | grep -oP "id=\K..")"')
+    end,
+    {description = 'disable synaptics touchpad', group = 'touchpad'}
+  ),
   awful.key(
     {altkey, 'Shift'},
     'h',
