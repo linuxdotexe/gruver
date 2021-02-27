@@ -87,7 +87,7 @@ awful.key(
     {altkey, 'Shift'},
     'e',
     function()
-      awful.spawn.with_shell('bash -c "xinput enable $(xinput | grep Synaptics | grep -oP "id=\K..")"')
+      awful.spawn.with_shell('xinput enable 11')
     end,
     {description = 'enable synaptics touchpad', group = 'touchpad'}
   ),
@@ -95,7 +95,7 @@ awful.key(
     {altkey, 'Shift'},
     'd',
     function()
-      awful.spawn.with_shell('bash -c "xinput disable $(xinput | grep Synaptics | grep -oP "id=\K..")"')
+      awful.spawn.with_shell('xinput disable 11')
     end,
     {description = 'disable synaptics touchpad', group = 'touchpad'}
   ),
