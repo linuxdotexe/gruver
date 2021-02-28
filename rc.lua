@@ -2,7 +2,7 @@ local gears = require('gears')
 local awful = require('awful')
 require('awful.autofocus')
 local beautiful = require('beautiful')
-local spotify_widget = require("widgetsFromGitHub.awesome-wm-widgets.spotify-widget.spotify")
+local hotcorner = require('hotcorner')
 
 -- Theme
 beautiful.init(require('theme'))
@@ -82,3 +82,11 @@ awful.spawn.with_shell('nm-applet')
 awful.spawn.with_shell('xfce4-power-manager')
 awful.spawn.with_shell('lxqt-policykit-agent')
 awful.spawn.with_shell('flameshot')
+
+hotcorner.create({
+        screen = s,
+        placement = awful.placement.bottom_right,
+        action = function()
+            awful.spawn.with_shell('xinput disable 11')
+        end
+    })
