@@ -50,7 +50,7 @@ function lock_command()
   awful.spawn.with_shell('i3lock -i ~/Downloads/lockwalp.png -O 0 -R 1500')
 end
 function poweroff_command()
-  awful.spawn.with_shell('poweroff')
+  awful.spawn.with_shell('shutdown now')
   awful.keygrabber.stop(_G.exit_screen_grabber)
 end
 function reboot_command()
@@ -116,7 +116,7 @@ exit_screen =
 )
 
 exit_screen.bg = beautiful.background.hue_800 .. 'dd'
-exit_screen.fg = beautiful.exit_screen_fg or beautiful.wibar_fg or '#FEFEFE'
+exit_screen.fg = beautiful.exit_screen_fg or beautiful.wibar_fg or '#d5c4a1'
 
 local exit_screen_grabber
 
