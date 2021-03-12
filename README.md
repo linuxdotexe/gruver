@@ -24,7 +24,7 @@ Original Work - [PapyElGringo's Material Awesome](https://github.com/material-sh
 ## Other suggested dependencies
 
 -   playerctl
--   i3lock-cac03-git (default lock is set to this. Lock icon in the exit screen might not work if this isn't there.)
+-   i3lock-color (default lock is set to this. Lock icon in the exit screen might not work if this isn't there.)
 -   Xfce4 Power Manager (press the power button to toggle the power menu, since I removed the menu_button and hence the functionality it provides.)
 -   Alacritty (the terminal is set to this, so the terminal might not open if this isn't there.)
 -   Compositor (this is really a choice, if you want transparency and blur, you can enable it thorugh adding this to start.)

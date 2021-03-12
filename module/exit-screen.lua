@@ -47,7 +47,7 @@ function exit_command()
 end
 function lock_command()
   exit_screen_hide()
-  awful.spawn.with_shell('i3lock -i ~/Downloads/lockwalp.png -O 0 -R 1500')
+  awful.spawn.with_shell('i3lock -u -i ~/Downloads/lockwalp.png -k --timecolor=fbf1c7 --datecolor=fbf1c7 --timestr="%I:%M:%S %p" --time-font="BlexMono Nerd Font Mono" --date-font="BlexMono Nerd Font Mono" --timesize=80 --datesize=25')
 end
 function poweroff_command()
   awful.spawn.with_shell('shutdown now')
