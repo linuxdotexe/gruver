@@ -18,7 +18,7 @@ local globalKeys =
   awful.key({modkey}, 'Escape', awful.tag.history.restore, {description = 'go back', group = 'tag'}),
   
   -- Spotify-shell
-   awful.key({ modkey, }, "s", function () shell.launch() end, {description = "spotify shell", group = "spotify"}),
+   awful.key({ modkey, }, "s", function () shell.launch() end, {description = "lauch apps through shell", group = "apps"}),
   -- Default client focus
   awful.key(
     {modkey},
