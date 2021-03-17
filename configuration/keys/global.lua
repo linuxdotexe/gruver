@@ -3,7 +3,7 @@ require('awful.autofocus')
 local beautiful = require('beautiful')
 local hotkeys_popup = require('awful.hotkeys_popup').widget
 
-local spotify_shell = require("widgetsFromGitHub.awesome-wm-widgets.spotify-shell.spotify-shell")
+local shell = require("widgetsFromGitHub.awesome-wm-widgets.shell.shell")
 local modkey = require('configuration.keys.mod').modKey
 local altkey = require('configuration.keys.mod').altKey
 local apps = require('configuration.apps')
@@ -18,7 +18,7 @@ local globalKeys =
   awful.key({modkey}, 'Escape', awful.tag.history.restore, {description = 'go back', group = 'tag'}),
   
   -- Spotify-shell
-   awful.key({ modkey, }, "s", function () spotify_shell.launch() end, {description = "spotify shell", group = "spotify"}),
+   awful.key({ modkey, }, "s", function () shell.launch() end, {description = "spotify shell", group = "spotify"}),
   -- Default client focus
   awful.key(
     {modkey},
@@ -177,7 +177,23 @@ awful.key(
     function()
       awful.spawn.with_shell('rofi -show run')
     end,
-    {description = 'dropdown application', group = 'launcher'}
+    {description = 'rofi run', group = 'rofi'}
+  ),
+  awful.key(
+    {modkey, 'Shift'},
+    'm',
+    function()
+      awful.spawn.with_shell('bash ~/rofi-scripts/manpages.sh')
+    end,
+    {description = 'search rofi man pages', group = 'rofi'}
+  ),
+  awful.key(
+    {modkey, 'Shift'},
+    's',
+    function()
+      awful.spawn.with_shell('bash ~/rofi-scripts/search.sh')
+    end,
+    {description = 'browsing with rofi', group = 'rofi'}
   ),
   -- ALSA volume control
   awful.key(
