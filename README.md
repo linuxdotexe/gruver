@@ -2,7 +2,7 @@
 
 Original Work - [PapyElGringo's Material Awesome](https://github.com/material-shell/material-awesome)
 
-![ssupdate](https://user-images.githubusercontent.com/74004229/107628539-c915d200-6c86-11eb-9eb4-d90afe8db2d2.png)
+![2021-03-18_11-08](https://user-images.githubusercontent.com/74004229/111578600-71fda280-87da-11eb-8530-2b99a36bbfb8.png)
 
 ## My changes
 
