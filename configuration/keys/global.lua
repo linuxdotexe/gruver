@@ -200,7 +200,7 @@ awful.key(
     {},
     'XF86AudioRaiseVolume',
     function()
-      awful.spawn('amixer -D pulse sset Master 5%+')
+      awful.spawn.with_shell('pamixer -i 5')
     end,
     {description = 'volume up', group = 'hotkeys'}
   ),
@@ -208,7 +208,7 @@ awful.key(
     {},
     'XF86AudioLowerVolume',
     function()
-      awful.spawn('amixer -D pulse sset Master 5%-')
+      awful.spawn.with_shell('pamixer -d 5')
     end,
     {description = 'volume down', group = 'hotkeys'}
   ),
@@ -216,7 +216,7 @@ awful.key(
     {},
     'XF86AudioMute',
     function()
-      awful.spawn('amixer -D pulse set Master 1+ toggle')
+      awful.spawn.with_shell('pamixer -m')
     end,
     {description = 'toggle mute', group = 'hotkeys'}
   ),
