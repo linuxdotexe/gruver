@@ -83,6 +83,7 @@ awful.spawn.with_shell('xfce4-power-manager')
 awful.spawn.with_shell('lxqt-policykit-agent')
 awful.spawn.with_shell('flameshot')
 awful.spawn.with_shell('birdtray')
+awful.spawn.with_shell('pulseaudio')
 
 hotcorner.create({
         screen = s,
