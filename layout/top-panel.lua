@@ -8,8 +8,6 @@ local mat_icon_button = require('widget.material.icon-button')
 local mat_icon = require('widget.material.icon')
 local TagList = require('widget.tag-list')
 local dpi = require('beautiful').xresources.apply_dpi
-local spotify_widget = require('widgetsFromGitHub.awesome-wm-widgets.spotify-widget.spotify')
-local todo_widget = require('widgetsFromGitHub.awesome-wm-widgets.todo-widget.todo')
 local icons = require('theme.icons')
 
 -- Clock / Calendar 12AM/PM fornat
@@ -23,14 +21,6 @@ local month_calendar = awful.widget.calendar_popup.month({
   week_numbers = true
 })
 month_calendar:attach(textclock)
--- ROBBED from https://git.sr.ht/~cnx/dotfiles/tree/d96622187e7886c889f04f553e449c4088ea76c0/item/awesome/.config/awesome/rc.lua
-local myplayer_text = wibox.widget.textbox()
-awful.spawn.with_line_callback(
-  "playerctl --follow metadata --format ' {{artist}} <{{status}}> {{title}}'",
-  {stdout = function (line)
-     myplayer_text:set_text(line:gsub('<Playing>', '|'):gsub('<.+>', '|'))
-   end}
-)
 local systray = wibox.widget.systray()
 systray:set_horizontal(true)
 systray:set_base_size(24)
@@ -134,8 +124,6 @@ local TopPanel = function(s, offset)
     nil,
     {
       layout = wibox.layout.fixed.horizontal,
-      myplayer_text,
-      todo_widget(),
       wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
       textclock,
       require('widget.battery'),
