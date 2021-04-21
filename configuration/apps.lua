@@ -7,7 +7,7 @@ return {
   default = {
     terminal = 'alacritty',
     editor = 'nvim',
-    lock = '13lock',
+    lock = 'i3lock',
     quake = 'alacritty --title QuakeTerminal'
   },
   -- List of apps to start once on start-up
