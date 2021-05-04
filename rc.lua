@@ -3,7 +3,7 @@ local awful = require('awful')
 require('awful.autofocus')
 local beautiful = require('beautiful')
 local hotcorner = require('hotcorner')
-
+-- testing
 -- Theme
 beautiful.init(require('theme'))
 
