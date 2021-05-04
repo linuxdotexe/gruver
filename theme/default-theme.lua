@@ -101,7 +101,7 @@ local awesome_overrides =
   theme.tasklist_fg_urgent = theme.fg_normal
   theme.tasklist_fg_normal = '#a89984'
 
-  theme.icon_theme = 'Papirus-Dark'
+  theme.icon_theme = 'oomox-gruvbox-dark'
 
   --Client
   theme.border_width = dpi(2)
