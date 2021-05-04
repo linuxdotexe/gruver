@@ -86,7 +86,6 @@ awful.spawn.with_shell('birdtray')
 awful.spawn.with_shell('pipewire')
 
 hotcorner.create({
-        screen = s,
         placement = awful.placement.bottom_right,
         action = function()
             awful.spawn.with_shell('xinput disable 11')
