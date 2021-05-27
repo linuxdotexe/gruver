@@ -216,7 +216,7 @@ awful.key(
     {},
     'XF86AudioMute',
     function()
-      awful.spawn.with_shell('pamixer -m')
+      awful.spawn.with_shell('pamixer -t')
     end,
     {description = 'toggle mute', group = 'hotkeys'}
   ),
