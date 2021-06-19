@@ -1,5 +1,7 @@
 # Gruver - An AwesomeWM theme
 
+## Included this in my dotfiles repo. This won't be a seperate repository anymore.
+
 Original Work - [PapyElGringo's Material Awesome](https://github.com/material-shell/material-awesome)
 
 ![2021-03-18_11-08](https://user-images.githubusercontent.com/74004229/111578600-71fda280-87da-11eb-8530-2b99a36bbfb8.png)
